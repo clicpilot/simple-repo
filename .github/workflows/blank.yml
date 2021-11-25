@@ -36,6 +36,6 @@ jobs:
           ls -l
           git add -A
           git commit -m "publish scaffloding by zip"
-          git push
+          git push --set-upstream origin scaffolding-release-br
 
 
