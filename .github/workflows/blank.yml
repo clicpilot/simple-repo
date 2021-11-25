@@ -28,6 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Archive
         run: |
+          mkdir scaffolding
           git archive --format=zip origin/main --output=./scaffolding/simple-repo-main.zip
           ls -l
 
