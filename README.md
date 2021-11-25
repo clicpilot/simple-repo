@@ -1,1 +1,1 @@
-# simple-repo
+# {{=params.name}}
