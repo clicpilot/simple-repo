@@ -40,4 +40,6 @@ jobs:
           cp ../simple-repo-main.zip public/scaffolding 
           git add -A
           git commit -m "publish scaffloding by zip"
+          git config --global user.email "clicpilot@163.com"
+          git config --global user.name "clicpilot"
           git push --set-upstream origin release-br
