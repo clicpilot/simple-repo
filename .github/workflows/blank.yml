@@ -28,6 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Archive
         run: |
+          git config --global user.email "clicpilot@163.com"
+          git config --global user.name "clicpilot"
           git checkout -b "scaffolding-release-br"
           mkdir scaffolding
           git archive --format=zip origin/main --output=./scaffolding/simple-repo-main.zip
