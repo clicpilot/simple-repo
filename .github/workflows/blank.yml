@@ -28,20 +28,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Archive
         run: |
+          git checkout -b "scaffolding-release-br"
           mkdir scaffolding
           git archive --format=zip origin/main --output=./scaffolding/simple-repo-main.zip
           ls -l
+          git add -A
+          git commit -m "publish scaffloding by zip"
+          git push
 
-      - name: Create pull request
-        uses: paygoc6/action-pull-request-another-repo@v1.0.1
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_folder: './scaffolding'
-          destination_repo: 'scaffolding-repos/ado-scaffolding'
-          destination_folder: 'public'
-          destination_base_branch: 'main'
-          destination_head_branch: 'simple-repo-branch'
-          user_email: 'clicpilot@163.com'
-          user_name: 'clicpilot'
-          pull_request_reviewers: 'maye-msft'
+
