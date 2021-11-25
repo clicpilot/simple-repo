@@ -37,7 +37,7 @@ jobs:
           git clone https://github.com/scaffolding-repos/ado-scaffolding
           cd ado-scaffolding
           git checkout -b release-br
-          cp ../simple-node/simple-repo-main.zip public/scaffolding 
+          cp ../simple-repo-main.zip public/scaffolding 
           git add -A
           git commit -m "publish scaffloding by zip"
           git push --set-upstream origin release-br
