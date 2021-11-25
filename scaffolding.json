@@ -1,0 +1,9 @@
+{
+  "variables": {
+    "name": {
+      "type": "string",
+      "title": "Project Name",
+      "default": "sampleApp"
+    }
+  }
+}
